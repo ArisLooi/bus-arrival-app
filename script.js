@@ -34,3 +34,8 @@ function displayBusArrival(busStopId) {
         console.error("Error:",error);
     });
 }
+
+function getBusTiming() {
+    const busStopId = busStopIdInput.ariaValueMax;
+    displayBusArrival(busStopId);
+}
