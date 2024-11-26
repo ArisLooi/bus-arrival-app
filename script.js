@@ -24,3 +24,13 @@ function formatArrivalData(arrivalData) {
         }
     return formattedData.join("");
 }
+
+function displayBusArrival(busStopId) {
+    arrivalInfo.innerHTML = "Loading...";
+    fetchBusArrival(busStopId).then((arrivalData) => {const formattedArrivalData = formattedArrivalData(arrivalData);
+    arrivalInfo.innerHTML = formattedArrivalData;
+})
+    .catch((error) => {
+        console.error("Error:",error);
+    });
+}
