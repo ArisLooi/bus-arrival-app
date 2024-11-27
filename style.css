@@ -1,9 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter';
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter';
   display: flex;
-  flex-direction:column;
-  align-items:center;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.bus-image {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 label {
@@ -11,24 +44,79 @@ label {
 }
 
 input {
-  padding: 10px;
+  padding: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 30px;
+  width: 80%;
 }
 
 #submit {
   background-color: #df2c27;
   color: white;
   padding: 15px;
-  width: 270px;
+  width: 80%;
   font-size: 16px;
   border-radius: 30px;
   cursor: pointer;
   margin-top: 20px;
 }
 
+.left {
+  padding: 30px;
+  width: 50%;
+  text-align: center;
+  background-color: #fff;
+  border-right: 2px solid #f0f0f0;
+}
+
+.right {
+  padding: 30px;
+  width: 50%;
+  background-color: #f7fbff;
+  text-align: left;
+}
+
+.right h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
 #arrivalInfo {
-  margin-top: 20px;
-  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bus-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bus-item span {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1024px) {
+  #cover {
+    display: flex;
+  }
+
+  main {
+    padding: 80px;
+  }
+
+  #titles-container {
+    font-size: 32px;
+  }
+
+  button {
+    padding: 16px;
+    font-size: 24px;
+  }
 }
