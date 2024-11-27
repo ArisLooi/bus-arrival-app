@@ -15,8 +15,7 @@ function formatArrivalData(arrivalData) {
     const buses = arrivalData.services;
     const formattedData = [];
     for (const bus of buses) {
-        const arrivalTimeString = `${bus.next_bus_mins} mins(s)`;
-        formattedData.push(`
+        const arrivalTimeString = bus.next_bus_mins <= 0 ? "Arriving" : `${bus.next_bus_mins} min(s)`; formattedData.push(`
             <div>
                 <strong>Bus ${bus.bus_no}</strong>: ${arrivalTimeString}
             </div>
