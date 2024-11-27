@@ -15,7 +15,7 @@ function formatArrivalData(arrivalData) {
     const buses = arrivalData.services;
     const formattedData = [];
     for (const bus of buses) {
-        const arrivalTimerString = `${bus.next_bus_mins} mins(s)`;
+        const arrivalTimeString = `${bus.next_bus_mins} mins(s)`;
         formattedData.push(`
             <div>
                 <strong>Bus ${bus.bus_no}</strong>: ${arrivalTimeString}
@@ -27,7 +27,7 @@ function formatArrivalData(arrivalData) {
 
 function displayBusArrival(busStopId) {
     arrivalInfo.innerHTML = "Loading...";
-    fetchBusArrival(busStopId).then((arrivalData) => {const formattedArrivalData = formattedArrivalData(arrivalData);
+    fetchBusArrival(busStopId).then((arrivalData) => {const formattedArrivalData = formatArrivalData(arrivalData);
     arrivalInfo.innerHTML = formattedArrivalData;
 })
     .catch((error) => {
@@ -36,6 +36,6 @@ function displayBusArrival(busStopId) {
 }
 
 function getBusTiming() {
-    const busStopId = busStopIdInput.ariaValueMax;
+    const busStopId = busStopIdInput.value;
     displayBusArrival(busStopId);
 }
