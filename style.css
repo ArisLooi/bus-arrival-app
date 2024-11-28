@@ -85,7 +85,9 @@ input {
 #arrivalInfo {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  border: 1px solid color;
+  border-radius: 50%;
+  justify-content: space-between;
 }
 
 .bus-item {
