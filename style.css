@@ -137,6 +137,12 @@ main {
   color: #0a0c32;
 }
 
+#fetched-container p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding: 10px;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     height: 100vh;

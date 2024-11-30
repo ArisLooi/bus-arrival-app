@@ -60,17 +60,17 @@ function formatArrivalData(arrivalData) {
 
     for (const bus of buses) {
         let arrivalTimeString = '';
-        if (bus.next_bus_mins < 0) { 
+        if (bus.next_bus_mins <= 0) { 
             arrivalTimeString = `<span><strong>Arriving</strong></span>`; 
         } else {
         arrivalTimeString = `<span><strong>${bus.next_bus_mins}</strong> min(s) </span>`;
+        }
         formattedData.push(`
         <li>
             <span><strong>Bus ${bus.bus_no}</strong></span>
             ${arrivalTimeString}
         </li>
         `)
-        }
     }
 
     return formattedData;
