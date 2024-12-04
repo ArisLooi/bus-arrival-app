@@ -4,10 +4,10 @@ Welcome to the Bus Arrival App! This application allows users to check the arriv
 
 ## Features
 
-- **Real-time Bus Arrival Information**: Get the latest arrival times for buses at a specific bus stop.
-- **Total Number of Buses**: Displays the total number of buses arriving at the bus stop.
-- **Automatic Updates**: The app automatically updates the bus arrival data every 5 seconds.
-- **User-friendly Interface**: Easy-to-use interface with clear instructions and loading indicators.
+- Real-time Bus Arrival Information: Get the latest arrival times for buses at a specific bus stop.
+- Total Number of Buses: Displays the total number of buses arriving at the bus stop.
+- Automatic Updates: The app automatically updates the bus arrival data every 5 seconds.
+- User-friendly Interface: Easy-to-use interface with clear instructions and loading indicators.
 
 ## Getting Started
 
@@ -22,40 +22,47 @@ To run this app, you need a modern web browser with JavaScript enabled.
    git clone https://github.com/yourusername/bus-arrival-app.git
 
 2. Navigate to the project directory:
+   ```bash
    cd bus-arrival-app
 
-3. Open the index.html file in your web browser.
+4. Open the index.html file in your web browser.
 
 ## Usage
-1. Open the app in your web browser.
-2. Enter the Bus Stop ID in the input field. For example, you can use 18141.
-3. Click the "Submit" button.
-4. The app will display the bus arrival times and the total number of buses at the specified bus stop.
-5. The data will automatically update every 5 seconds.
+1. Open the index.html file in your web browser.
+2. Enter a bus stop ID (e.g., 18141) and click "Submit" to get the bus arrival times.
+3. View the bus arrival information and the total number of buses arriving at the bus stop.
 
-## Code Overview
-### HTML
-The HTML file (index.html) contains the structure of the app, including the input field for the Bus Stop ID, loading indicators, and the container for displaying bus arrival information.
+## Project Structure
+bus-arrival-app/
+├── index.html
+├── script.js
+├── style.css
+├── bus.png
+├── bus.svg
+├── README.md
+└── LICENSE
+- index.html: The main HTML file that contains the structure of the application.
+- script.js: The JavaScript file that contains the logic for fetching and displaying bus arrival times.
+- style.css: The CSS file that contains the styles for the application.
+- bus.png: An image used in the cover section.
+- bus.svg: An image used in the fetching container.
+- README.md: This file.
+- LICENSE: The file that contains the licensing terms for the project.
 
-### CSS
-The CSS file (style.css) contains the styles for the app, ensuring a user-friendly and responsive design.
-
-### JavaScript
-- **The JavaScript file (script.js) contains the logic for fetching and displaying bus arrival data. Key functions include:
-- **getBusTiming(): Retrieves the Bus Stop ID and calls displayBusArrival().
-- **displayBusArrival(busStopId): Fetches bus arrival data and updates the UI.
-- **fetchBusArrival(busStopId): Makes an API call to fetch bus arrival data.
-- **formatArrivalData(arrivalData): Formats the bus arrival data for display.
-
-### API
-The app uses the SG Bus Arrivals API https://sg-bus-arrivals.vercel.app/ to fetch real-time bus arrival data.
+## Functions
+- getBusTiming(): Retrieves the bus stop ID from the input field and calls displayBusArrival().
+- displayBusArrival(busStopId): Fetches bus arrival data and updates the UI with the fetched information.
+- fetchBusArrival(busStopId): Fetches bus arrival data from the SG Bus Arrivals API.
+- formatArrivalData(arrivalData): Formats the fetched bus arrival data for display.
 
 ## Contributing
-Contributions are welcome! If you have any suggestions or improvements, please create a pull request or open an issue.
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Acknowledgements
-- **SG Bus Arrivals API
-- **Google Fonts
+## Acknowledgments
+- Thanks to all the developers who have contributed to open-source projects and made learning to code accessible to everyone.
+- Special thanks to the SG Bus Arrivals API for providing real-time bus arrival data.
+
+Happy coding! 😊
