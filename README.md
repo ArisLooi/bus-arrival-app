@@ -19,7 +19,7 @@ To run this app, you need a modern web browser with JavaScript enabled.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/bus-arrival-app.git
+   git clone https://github.com/ArisLooi/bus-arrival-app.git
 
 2. Navigate to the project directory:
    ```bash
